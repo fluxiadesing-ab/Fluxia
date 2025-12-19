@@ -20,7 +20,7 @@ const CustomizeSection: React.FC = () => {
 
   // نضاعف المنتجات للحصول على حركة سلسة
   const duplicatedProducts = [...products, ...products];
-
+  
   return (
     <section className="bg-gray-50 py-10 overflow-hidden">
       <div className="container mx-auto px-6">
