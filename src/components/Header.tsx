@@ -1,21 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
-import { Search, ChevronDown } from "lucide-react";
+import { Search, ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-// 1. استيراد usePathname لمعرفة المسار الحالي
 import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // 2. تفعيل التابع للحصول على المسار (مثل / أو /story)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // 3. دالة مساعدة لتحديد ما إذا كان الرابط نشطاً أم لا
   const isActive = (path: string) => pathname === path;
 
-  // قائمة الروابط لتسهيل الإدارة وتجنب التكرار
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Shop", href: "/shop" },
@@ -38,16 +35,24 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6 py-10">
         <div className="flex items-center justify-between relative min-h-[60px]">
           
-          {/* Navigation Links */}
-          <nav className="flex items-center space-x-8">
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden z-50 relative hover:text-gray-300 transition-colors"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+
+          {/* Navigation Links - Desktop */}
+          <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`transition-colors pb-1 ${
                   isActive(link.href)
-                    ? "text-white border-b-2 border-white font-medium" // التنسيق عند النشاط
-                    : "text-gray-300 hover:text-white" // التنسيق العادي
+                    ? "text-white border-b-2 border-white font-medium"
+                    : "text-gray-300 hover:text-white"
                 }`}
               >
                 {link.name}
@@ -69,7 +74,7 @@ const Header: React.FC = () => {
 
           {/* Right Side */}
           <div className="flex items-center space-x-4">
-            <div className="relative">
+            <div className="relative hidden lg:block">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="flex items-center space-x-2 text-sm hover:text-gray-300 transition-colors"
@@ -95,6 +100,50 @@ const Header: React.FC = () => {
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden fixed inset-0 bg-black z-40 pt-24">
+            <nav className="flex flex-col items-center space-y-6 px-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-xl transition-colors pb-2 ${
+                    isActive(link.href)
+                      ? "text-white border-b-2 border-white font-medium"
+                      : "text-gray-300 hover:text-white"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              
+              {/* Mobile Currency Dropdown */}
+              <div className="pt-6 border-t border-gray-800 w-full text-center">
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="flex items-center justify-center space-x-2 text-sm hover:text-gray-300 transition-colors mx-auto"
+                >
+                  <span>United States | USD $</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {isDropdownOpen && (
+                  <div className="mt-2 bg-gray-900 rounded-lg py-2 mx-auto w-56">
+                    <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-800">
+                      United States | USD $
+                    </a>
+                    <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-800">
+                      Canada | CAD $
+                    </a>
+                  </div>
+                )}
+              </div>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );

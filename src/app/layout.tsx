@@ -14,7 +14,6 @@ const robotoCondensed = Roboto_Condensed({
   weight: ["300", "400", "700"],
 });
 
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -32,13 +31,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="rIR1OB2ssan6EnTGgcfHHgsh1ns6TaYKrQeh5CndLkA"
+        />
+      </head>
       <body
-  className={`
+        className={`
     ${robotoCondensed.variable}
     antialiased
   `}
->
-
+      >
         {children}
       </body>
     </html>
