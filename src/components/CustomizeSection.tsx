@@ -6,10 +6,16 @@ import Image from "next/image";
 const CustomizeSection: React.FC = () => {
   // يمكنك استبدال هذه بمسارات صورك الفعلية
   const products = [
-    { id: 1, image: "/assets/image1.jpg", alt: "Stay Chill Cat" },
-    { id: 2, image: "/assets/image2.jpg", alt: "Dog Dad" },
-    { id: 3, image: "/assets/image3.jpg", alt: "Stay Chill Dog" },
-    { id: 4, image: "/assets/image4.jpg", alt: "You Got This" },
+    { id: 1, image: "/assets/image1.png", alt: "Stay Chill Cat" },
+    { id: 2, image: "/assets/image2.png", alt: "Dog Dad" },
+    { id: 3, image: "/assets/image3.png", alt: "Stay Chill Dog" },
+    { id: 4, image: "/assets/image4.png", alt: "You Got This" },
+    { id: 5, image: "/assets/image5.png", alt: "Adventure Awaits" },
+    { id: 6, image: "/assets/image6.png", alt: "Coffee Lover" },  
+    { id: 7, image: "/assets/image7.png", alt: "Bookworm" },
+    { id: 8, image: "/assets/image8.png", alt: "Nature Explorer" },
+    { id: 9, image: "/assets/image9.png", alt: "Music Vibes" },
+    { id: 10, image: "/assets/image10.png", alt: "Fitness Fanatic" },
   ];
 
   // نضاعف المنتجات للحصول على حركة سلسة
@@ -46,6 +52,7 @@ const CustomizeSection: React.FC = () => {
                         fill
                         className="object-cover"
                         sizes="256px"
+                        unoptimized
                         priority={index < 4}
                       />
                     </div>
@@ -67,6 +74,7 @@ const CustomizeSection: React.FC = () => {
                         src={product.image}
                         alt={product.alt}
                         fill
+                        unoptimized
                         className="object-cover"
                         sizes="256px"
                         priority={index < 4}
