@@ -3,10 +3,25 @@
 import React, { useState } from "react";
 import { Search, ChevronDown } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link"; // يفضل استخدام Link في Next.js
+import Link from "next/link";
+// 1. استيراد usePathname لمعرفة المسار الحالي
+import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // 2. تفعيل التابع للحصول على المسار (مثل / أو /story)
+  const pathname = usePathname();
+
+  // 3. دالة مساعدة لتحديد ما إذا كان الرابط نشطاً أم لا
+  const isActive = (path: string) => pathname === path;
+
+  // قائمة الروابط لتسهيل الإدارة وتجنب التكرار
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Shop", href: "/shop" },
+    { name: "Story Behind FLUXIA", href: "/story" },
+    { name: "About us", href: "/about" },
+  ];
 
   return (
     <header className="bg-black text-white w-full">
@@ -21,26 +36,26 @@ const Header: React.FC = () => {
 
       {/* Main Header Container */}
       <div className="container mx-auto px-6 py-10">
-        {/* أضفنا relative هنا ليعمل التموضع المطلق للوجو بشكل صحيح */}
         <div className="flex items-center justify-between relative min-h-[60px]">
           
           {/* Navigation Links */}
           <nav className="flex items-center space-x-8">
-            <Link href="/" className="text-white font-medium hover:text-gray-300 transition-colors border-b-2 border-white pb-1">
-              Home
-            </Link>
-            <Link href="/story" className="text-gray-300 hover:text-white transition-colors">
-              Story Behind FLUXIA
-            </Link>
-            <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-              About us
-            </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-              Contact us
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`transition-colors pb-1 ${
+                  isActive(link.href)
+                    ? "text-white border-b-2 border-white font-medium" // التنسيق عند النشاط
+                    : "text-gray-300 hover:text-white" // التنسيق العادي
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
           </nav>
 
-          {/* Logo - التموسط الآن سيعمل بشكل صحيح بالنسبة للحاوية */}
+          {/* Logo */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <Image
               src="/images/logo.jpeg" 

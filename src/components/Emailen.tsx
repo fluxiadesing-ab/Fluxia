@@ -62,7 +62,7 @@ const EmailEnter: React.FC = () => {
               <button
                 onClick={handleSubmit}
                 disabled={isSubmitted}
-                className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all transform  disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap"
+                className="px-6 py-4 bg-white text-black font-semibold  hover:bg-gray-200 transition-all transform  disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap"
               >
                 {isSubmitted ? (
                   <span>Subscribed ✓</span>

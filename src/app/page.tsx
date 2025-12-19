@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import CustomizeSection from '../components/CustomizeSection';
+import DHero from '../components/DHero';
 import Footer from '../components/Footer';
 import Email from '../components/Emailen';
 
@@ -14,10 +14,9 @@ export default function Home() {
       <main className="flex min-h-screen w-full  flex-col  bg-white">
         <Header />
         <Hero />
-        <CustomizeSection />
+        <DHero />
         <Email />
         <Footer />
-       
       </main>
     </div>
   );
