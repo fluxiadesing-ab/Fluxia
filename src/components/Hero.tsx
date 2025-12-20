@@ -7,16 +7,19 @@ import Image from "next/image";
 const Hero: React.FC = () => {
   // يمكنك استبدال هذه بمسارات صورك الفعلية
   const products = [
-    { id: 1, image: "/assets/image1.png", alt: "Stay Chill Cat" },
-    { id: 2, image: "/assets/image2.png", alt: "Dog Dad" },
-    { id: 3, image: "/assets/image3.png", alt: "Stay Chill Dog" },
-    { id: 4, image: "/assets/image4.png", alt: "You Got This" },
-    { id: 5, image: "/assets/image5.png", alt: "Adventure Awaits" },
-    { id: 6, image: "/assets/image6.png", alt: "Coffee Lover" },  
-    { id: 7, image: "/assets/image7.png", alt: "Bookworm" },
-    { id: 8, image: "/assets/image8.png", alt: "Nature Explorer" },
-    { id: 9, image: "/assets/image9.png", alt: "Music Vibes" },
-    { id: 10, image: "/assets/image10.png", alt: "Fitness Fanatic" },
+    { id: 1, image: "/images/assets/image1.png", alt: "Stay Chill Cat" },
+    { id: 2, image: "/images/assets/image2.png", alt: "Dog Dad" },
+    { id: 3, image: "/images/assets/image3.png", alt: "Stay Chill Dog" },
+    { id: 4, image: "/images/assets/image4.png", alt: "You Got This" },
+    { id: 5, image: "/images/assets/image5.png", alt: "Adventure Awaits" },
+    { id: 6, image: "/images/assets/image6.png", alt: "Coffee Lover" },  
+    { id: 7, image: "/images/assets/image7.png", alt: "Bookworm" },
+    { id: 8, image: "/images/assets/image8.png", alt: "Nature Explorer" },
+    { id: 9, image: "/images/assets/image9.png", alt: "Music Vibes" },
+    { id: 10, image: "/images/assets/image10.png", alt: "Fitness Fanatic" },
+    { id: 11, image: "/images/assets/image11.png", alt: "Travel Bug" },
+    { id: 12, image: "/images/assets/image12.png", alt: "Foodie Fun" }
+
   ];
 
   // نضاعف المنتجات للحصول على حركة سلسة

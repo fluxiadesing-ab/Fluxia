@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import DHero from '../components/DHero';
 import Footer from '../components/Footer';
 import Email from '../components/Emailen';
+import ProductsGrid from "@/components/ProductsGrid";
 
 
 
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex min-h-screen w-full  flex-col  bg-white">
         <Header />
         <Hero />
+        <ProductsGrid />
         <DHero />
         <Email />
         <Footer />
