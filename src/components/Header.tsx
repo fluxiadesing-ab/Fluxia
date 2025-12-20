@@ -64,7 +64,7 @@ const Header: React.FC = () => {
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <Image
               src="/images/logo.jpeg" 
-              alt="FLUXIA Logo"
+              alt="FLUXIA Design"
               width={140}
               height={140}
               priority
