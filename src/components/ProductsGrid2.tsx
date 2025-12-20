@@ -33,7 +33,6 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
             src={product.images[currentImageIndex]}
             alt={product.title}
             fill
-            unoptimized
             // التعديل هنا:
             // p-2 : حواواف صغيرة جداً للجوال لتأخذ الصورة راحتها وتكبر
             // md:p-14 : في الشاشات المتوسطة والكبيرة تعود الحواف الكبيرة كما تحب

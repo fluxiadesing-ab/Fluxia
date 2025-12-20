@@ -126,7 +126,6 @@ const InfiniteSlider = () => {
               src={slide.image}
               alt={slide.alt}
               fill
-              unoptimized
               className="object-cover pointer-events-none p-4"
               draggable={false}
             />
