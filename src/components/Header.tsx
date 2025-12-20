@@ -16,8 +16,8 @@ const Header: React.FC = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Shop", href: "/shop" },
+    { name: "Customize", href: "https://fluxia.myspreadshop.com/create" },
     { name: "Story Behind FLUXIA", href: "/story" },
-    { name: "About us", href: "/about" },
   ];
 
   return (

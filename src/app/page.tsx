@@ -5,6 +5,7 @@ import DHero from '../components/DHero';
 import Footer from '../components/Footer';
 import Email from '../components/Emailen';
 import ProductsGrid from "@/components/ProductsGrid";
+import InfiniteSlider from "@/components/InfiniteSlider";
 
 
 
@@ -16,6 +17,7 @@ export default function Home() {
         <Header />
         <Hero />
         <ProductsGrid />
+        <InfiniteSlider />
         <DHero />
         <Email />
         <Footer />

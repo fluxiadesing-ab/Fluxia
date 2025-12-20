@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           {/* Left Side - Text Content */}
           <div className="space-y-6 flex flex-col mb-8 items-center text-center">
             <h2 className="text-5xl lg:text-6xl md:text-4xl font-bold text-black leading-tight">
-              Own your style
+              A wide range of stunning designs
             </h2>
             <p className="text-2xl lg:text-2xl text-gray-700">
               Customize your print, your way
