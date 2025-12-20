@@ -68,10 +68,8 @@ const DHero: React.FC = () => {
               Wear . sip . gift your story
             </p>
             
-            <Link href="/shop">
-              <button className="mt-4 px-8 py-3 border border-white hover:bg-white hover:text-black transition-all duration-300">
-                SHOP NOW
-              </button>
+            <Link href="/shop" className="mt-4 px-8 py-3 border border-white hover:bg-white hover:text-black transition-all duration-300">
+              SHOP NOW
             </Link>
           </div>
 

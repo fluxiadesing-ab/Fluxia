@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden z-50 relative hover:text-gray-300 transition-colors"
+            className="lg:hidden z-50 relative hover:text-gray-300 transition-colors" aria-label="Menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -95,7 +95,7 @@ const Header: React.FC = () => {
               )}
             </div>
 
-            <button className="hover:text-gray-300 transition-colors">
+            <button className="hover:text-gray-300 transition-colors" aria-label="Search">
               <Search className="w-5 h-5" />
             </button>
           </div>

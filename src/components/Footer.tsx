@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
             
             {/* Country/Region Selector (نقل إلى هنا) */}
             <div className="relative">
-              <p className="text-[10px] text-gray-500 uppercase mb-2">Country/region</p>
+              <p className="text-[10px] text-gray-300 uppercase mb-2">Country/region</p>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="flex items-center justify-between space-x-4 px-3 py-2 border border-gray-700 rounded text-sm hover:bg-gray-900 transition-all min-w-[180px]"
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Copyright */}
-            <div className="text-[12px] text-gray-500 order-last md:order-none">
+            <div className="text-[12px] text-gray-300 order-last md:order-none">
               © {new Date().getFullYear()}, <span className="text-gray-300 font-medium tracking-widest">FLUXIA</span>. All rights reserved.
             </div>
 
