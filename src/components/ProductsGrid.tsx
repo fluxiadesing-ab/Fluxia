@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useEffect  } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link"; // 1. استيراد مكون Link
 
 interface Product {
   id: number;
@@ -9,79 +10,68 @@ interface Product {
   price: number;
   description: string;
   images: string[];
+  link: string; // 2. إضافة حقل الرابط في الواجهة (Interface)
 }
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    //   useEffect(() => {
-    //   const interval = setInterval(() => {
-    //     setCurrentImageIndex((prevIndex) =>
-    //       prevIndex === product.images.length - 1 ? 0 : prevIndex + 1
-    //     );
-    //   }, 3000); // Change image every 3 seconds
-    //   return () => clearInterval(interval);
-    // }, [product.images.length]);
-
   return (
-    <article className="group bg-white overflow-hidden shadow-md hover:border-gray-600 border border-transparent rounded-lg">
-      {/* Image Container */}
-      <div className="relative aspect-square overflow-hidden bg-gray-300">
-        <div className="relative aspect-square bg-[#3b3b3b] flex items-center justify-center overflow-hidden">
-          <Image
-            src={product.images[currentImageIndex]}
-            alt={product.title}
-            fill
-            // التعديل هنا:
-            // p-2 : حواواف صغيرة جداً للجوال لتأخذ الصورة راحتها وتكبر
-            // md:p-14 : في الشاشات المتوسطة والكبيرة تعود الحواف الكبيرة كما تحب
-            className="object-contain p-2 md:p-12 group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            priority={product.id <= 4}
-          />
-        </div>
-
-        {/* Image Indicators */}
-        <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1.5">
-          {product.images.map((_, index) => (
-            <div
-              key={index}
-              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                index === currentImageIndex ? "bg-white w-4" : "bg-white/50"
-              }`}
+    // 3. تغليف الكارت بالكامل بـ Link
+    <Link href={product.link} className="block group">
+      <article className="bg-white overflow-hidden shadow-md hover:border-gray-600 border border-transparent rounded-lg transition-all duration-300 h-full">
+        {/* Image Container */}
+        <div className="relative aspect-square overflow-hidden bg-gray-300">
+          <div className="relative aspect-square bg-[#3b3b3b] flex items-center justify-center overflow-hidden">
+            <Image
+              src={product.images[currentImageIndex]}
+              alt={product.title}
+              fill
+              unoptimized // إضافة هذه إذا كانت الصور من روابط خارجية أو أصول ثابتة بسيطة
+              className="object-contain p-2 md:p-12 group-hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              priority={product.id <= 4}
             />
-          ))}
+          </div>
+
+          {/* Image Indicators */}
+          <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1.5">
+            {product.images.map((_, index) => (
+              <div
+                key={index}
+                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                  index === currentImageIndex ? "bg-white w-4" : "bg-white/50"
+                }`}
+              />
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* Product Info */}
-      <div className="p-3 md:p-4">
-        <h3 className="text-sm md:text-lg font-medium text-gray-900 mb-2 mt-2 md:mt-5 line-clamp-2 hover:text-gray-700 transition-colors text-center">
-          {product.title}
-        </h3>
+        {/* Product Info */}
+        <div className="p-3 md:p-4">
+          <h3 className="text-sm md:text-lg font-medium text-gray-900 mb-2 mt-2 md:mt-5 line-clamp-2 group-hover:text-gray-700 transition-colors text-center">
+            {product.title}
+          </h3>
 
-        {/* Hidden Description for SEO */}
-        <p className="text-xs md:text-sm text-gray-600 line-clamp-1 text-center mt-1 md:mt-2">
-          {product.description}
-        </p>
-      </div>
-    </article>
+          <p className="text-xs md:text-sm text-gray-600 line-clamp-1 text-center mt-1 md:mt-2 ">
+            {product.description}
+          </p>
+        </div>
+      </article>
+    </Link>
   );
 };
 
 const ProductsGrid: React.FC = () => {
+  // 4. إضافة روابط المنتجات هنا (مثلاً روابط لصفحة التصميم المعني d=1)
   const products: Product[] = [
     {
       id: 1,
       title: "YOU GOT THIS",
       price: 24.99,
-      description:
-        "Motivational design that inspires confidence and positivity. Great for men, women, teens, and kids who appreciate uplifting messages and supportive encouragement. Perfect for everyday wear.",
-      images: [
-        "/assets/top/1/1.png",
-        "/assets/top/1/2.png",
-        "/assets/top/1/3.png",
-      ],
+      description: "Motivational design that inspires confidence.",
+      images: ["/assets/top/1/1.png", "/assets/top/1/2.png", "/assets/top/1/3.png"],
+      link: "/shop?d=1", // رابط يوجه لتصميم رقم 1
     },
     {
       id: 2,
@@ -94,6 +84,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/2/2.png",
         "/assets/top/2/3.png",
       ],
+      link: "/shop?d=2"
     },
     {
       id: 3,
@@ -106,6 +97,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/3/2.png",
         "/assets/top/3/3.png",
       ],
+      link: "/shop?d=3"
     },
     {
       id: 4,
@@ -118,6 +110,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/4/2.png",
         "/assets/top/4/3.png",
       ],
+      link: "/shop?d=2"
     },
     {
       id: 5,
@@ -130,6 +123,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/5/2.png",
         "/assets/top/5/3.png",
       ],
+      link: "/shop?d=2"
     },
     {
       id: 6,
@@ -142,6 +136,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/6/2.png",
         "/assets/top/6/3.png",
       ],
+      link: "/shop?d=2"
     },
     {
       id: 7,
@@ -154,6 +149,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/7/2.png",
         "/assets/top/7/3.png",
       ],
+      link: "/shop?d=2"
     },
     {
       id: 8,
@@ -166,6 +162,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/8/2.png",
         "/assets/top/8/3.png",
       ],
+      link: "/shop?d=2"
     },
   ];
 

@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
                 {duplicatedProducts.map((product, index) => (
                   <div
                     key={`row1-${index}`}
-                    className="flex-shrink-0 w-48 h-48 lg:w-52 lg:h-52 bg-gray-300 rounded-lg overflow-hidden shadow-lg"
+                    className="flex-shrink-0 w-24 h-24 lg:w-52 lg:h-52 bg-gray-300 rounded-lg overflow-hidden shadow-lg"
                   >
                     <div className="relative w-full h-full">
                       <Image
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
                 {duplicatedProducts.map((product, index) => (
                   <div
                     key={`row2-${index}`}
-                    className="flex-shrink-0 w-48 h-48 lg:w-52 lg:h-52 bg-gray-300 rounded-lg overflow-hidden shadow-lg"
+                    className="flex-shrink-0 w-24 h-24 lg:w-52 lg:h-52 bg-gray-300 rounded-lg overflow-hidden shadow-lg"
                   >
                     <div className="relative w-full h-full">
                       <Image
