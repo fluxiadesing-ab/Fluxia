@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation'; // استيراد أدوات التحكم بالروابط
@@ -62,15 +62,123 @@ const designsData: Record<string, Design> = {
 
     ]
   },
-  // "3": {
-  //   id: "3",
-  //   name: "Nature Collection",
-  //   designImage: "/assets/designs/3.png",
-  //   products: [
-  //     { id: "n1", title: "Mountain View", price: 39.99, description: "Nature print", image: "/assets/pro/4/1.png", link: "/products/nature-1" },
-  //   ]
-  // },
-  // ... باقي البيانات
+  "3": {
+    id: "3",
+    name: "Nature Collection",
+    designImage: "/assets/designs/3.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "3-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "4": {
+    id: "4",
+    name: "Nature Collection",
+    designImage: "/assets/designs/4.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "4-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "5": {
+    id: "5",
+    name: "Nature Collection",
+    designImage: "/assets/designs/5.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "5-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "6": {
+    id: "6",
+    name: "Nature Collection",
+    designImage: "/assets/designs/6.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "6-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "7": {
+    id: "7",
+    name: "Nature Collection",
+    designImage: "/assets/designs/7.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "7-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "8": {
+    id: "8",
+    name: "Nature Collection",
+    designImage: "/assets/designs/8.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "8-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "9": {
+    id: "9",
+    name: "Nature Collection",
+    designImage: "/assets/designs/9.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "9-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "10": {
+    id: "10",
+    name: "Nature Collection",
+    designImage: "/assets/designs/10.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "10-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "11": {
+    id: "11",
+    name: "Nature Collection",
+    designImage: "/assets/designs/11.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "11-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "12": {
+    id: "12",
+    name: "Nature Collection",
+    designImage: "/assets/designs/12.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "12-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "13": {
+    id: "13",
+    name: "Enjoy The Process Motivational Shirt",
+    designImage: "/assets/designs/13.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "13-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "14": {
+    id: "14",
+    name: "Conquer The Day Motivational T-Shirt",
+    designImage: "/assets/designs/14.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "14-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
+  "15": {
+    id: "15",
+    name: "Sweat Is Just Fat Crying' Funny Workout Gy",
+    designImage: "/assets/designs/15.png",
+    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    products: [
+      { id: "15-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+    ]
+  },
 };
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
@@ -114,7 +222,13 @@ function ShopContent() {
   const [selectedDesign, setSelectedDesign] = useState<string>(designQuery || initialDesignId);
   const [isSticky, setIsSticky] = useState(false);
 
-  // تحديث التصميم المختار بناءً على الرابط
+  // --- إعدادات السحب المحسنة ---
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [isDown, setIsDown] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const [isMoved, setIsMoved] = useState(false); // للتفريق بين السحب والنقر
+
   useEffect(() => {
     if (designQuery && designsData[designQuery]) {
       setSelectedDesign(designQuery);
@@ -127,16 +241,47 @@ function ShopContent() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!sliderRef.current) return;
+    setIsDown(true);
+    setIsMoved(false); // إعادة التعيين عند كل ضغطة
+    setStartX(e.pageX - sliderRef.current.offsetLeft);
+    setScrollLeft(sliderRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDown(false);
+  };
+
+  const handleMouseUp = (e: React.MouseEvent) => {
+    setIsDown(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDown || !sliderRef.current) return;
+    
+    const x = e.pageX - sliderRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    
+    // إذا تحرك المستخدم أكثر من 5 بكسل، نعتبره سحباً وليس نقراً
+    if (Math.abs(walk) > 5) {
+      setIsMoved(true);
+      e.preventDefault(); // منع أي سلوك افتراضي فقط عند التحرك الفعلي
+      sliderRef.current.scrollLeft = scrollLeft - walk;
+    }
+  };
+
   const handleDesignChange = (id: string) => {
+    // إذا كان المستخدم يسحب، لا نغير التصميم
+    if (isMoved) return;
+    
     setSelectedDesign(id);
     router.push(`/shop?d=${id}`, { scroll: false });
   };
 
-  // استخراج البيانات للتصميم المختار
   const currentDesignData = designsData[selectedDesign];
   const displayProducts = currentDesignData?.products || [];
   const seeAllLink = currentDesignData?.allProductsLink || "#";
-
   return (
     <>
       {/* شريط التصاميم العلوي */}
@@ -144,21 +289,53 @@ function ShopContent() {
         isSticky ? 'sticky top-0 shadow-lg' : 'relative shadow-sm'
       }`}>
         <div className="py-2">
-          <div className="overflow-x-auto scrollbar-hide">
+          <div 
+            ref={sliderRef}
+            className={`overflow-x-auto scrollbar-hide ${isDown ? 'cursor-grabbing' : 'cursor-grab'}`}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+          >
             <div className="flex gap-6 px-4 md:px-8 pb-2 min-w-max items-center">
               {Object.values(designsData).map((design) => (
                 <button
                   key={design.id}
                   onClick={() => handleDesignChange(design.id)}
-                  className="flex-shrink-0 group"
+                  onDragStart={(e) => e.preventDefault()}
+                  className="flex-shrink-0 group outline-none"
                 >
                   <div className={`relative w-18 h-18   md:w-24 md:h-24 rounded-lg overflow-hidden bg-[#3b3b3b] border transition-all mt-2 ${
-                    selectedDesign === design.id ? 'border-black scale-110 shadow-md' : 'border-gray-100 opacity-70 hover:opacity-100'
+                    selectedDesign === design.id ? 'border-black scale-110 shadow-md' : 'border-gray-100 opacity-80 hover:opacity-100'
                   }`}>
-                    <Image src={design.designImage} alt={design.name} fill className="object-contain p-2" />
+                    <Image src={design.designImage} alt={design.name} fill // أهم خاصية: منع تداخل أحداث الصورة مع السحب
+                      className="object-contain p-2 pointer-events-none select-none" 
+                      draggable={false} />
                   </div>
                 </button>
               ))}
+
+              {/* --- زر "See All" الجديد في نهاية الشريط --- */}
+              <Link 
+                href="https://fluxia.myspreadshop.com/all?listModeOverride=DESIGN" // ضع رابط متجرك الرئيسي هنا
+                className="flex-shrink-0 group outline-none no-underline"
+                onDragStart={(e) => e.preventDefault()}
+                onClick={(e) => isMoved && e.preventDefault()} // منع الانتقال إذا كان سحباً
+              >
+                <div className="flex flex-col items-center justify-center w-18 h-18 md:w-24 md:h-24 rounded-lg bg-gray-100 border border-dashed border-gray-400 mt-2 transition-all group-hover:bg-black group-hover:border-black group-active:scale-95">
+                  <span className="text-[10px] md:text-xs font-bold text-gray-600 group-hover:text-white uppercase tracking-tighter">
+                    See All
+                  </span>
+                  <svg 
+                    className="w-4 h-4 md:w-6 md:h-6 text-gray-500 group-hover:text-white mt-1" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -201,6 +378,19 @@ function ShopContent() {
             </div>
           )}
       </section>
+      {/* كود CSS المخصص لإخفاء الشريط نهائياً */}
+  <style jsx global>{`
+    /* إخفاء شريط التمرير لمتصفحات Chrome و Safari و Edge */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* إخفاء شريط التمرير لمتصفح Firefox */
+    .scrollbar-hide {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  `}</style>
     </>
   );
 }
