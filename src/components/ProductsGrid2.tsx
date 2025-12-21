@@ -80,8 +80,6 @@ const ProductsGrid2: React.FC = () => {
         "Inspiring “Small Steps Lead to Big Changes” tee. Perfect for motivation, personal growth, gym wear, or daily positivity. A great reminder to stay consistent and believe in progress.",
       images: [
         "/assets/down/1/1.png",
-        "/assets/down/1/2.png",
-        "/assets/down/1/3.png",
       ],
       link: "/shop?d=9"
     },
@@ -93,8 +91,6 @@ const ProductsGrid2: React.FC = () => {
         "Cool “Gamer Don’t Pause” tee for real gamers who never quit mid-match. Funny gaming shirt perfect for streamers, friends, or any video game lover. Great gift for gamers.",
       images: [
         "/assets/down/2/1.png",
-        "/assets/down/2/2.png",
-        "/assets/down/2/3.png",
       ],
       link: "/shop?d=10"
     },
@@ -106,8 +102,6 @@ const ProductsGrid2: React.FC = () => {
         "Motivational “Smile More, Stress Less Daily” tee. Retro-style design that promotes a happier mindset and works great as an apology gift. Perfect for everyday wear.",
       images: [
         "/assets/down/3/1.png",
-        "/assets/down/3/2.png",
-        "/assets/down/3/3.png",
       ],
       link: "/shop?d=11"
     },
@@ -119,8 +113,6 @@ const ProductsGrid2: React.FC = () => {
         "Combine your love for sloths and dogs with the 'Easily Distracted By Sloths And Dogs' T-shirt. A fun choice for animal lovers who adore these adorable creatures.",
       images: [
         "/assets/down/4/1.png",
-        "/assets/down/4/2.png",
-        "/assets/down/4/3.png",
       ],
       link: "/shop?d=12"
     },

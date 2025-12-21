@@ -16,6 +16,15 @@ interface Product {
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+    //   useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentImageIndex((prevIndex) =>
+  //       prevIndex === product.images.length - 1 ? 0 : prevIndex + 1
+  //     );
+  //   }, 3000); // Change image every 3 seconds
+  //   return () => clearInterval(interval);
+  // }, [product.images.length]);
+
   return (
     // 3. تغليف الكارت بالكامل بـ Link
     <Link href={product.link} className="block group">
@@ -69,7 +78,7 @@ const ProductsGrid: React.FC = () => {
       title: "YOU GOT THIS",
       price: 24.99,
       description: "Motivational design that inspires confidence.",
-      images: ["/assets/top/1/1.png", "/assets/top/1/2.png", "/assets/top/1/3.png"],
+      images: ["/assets/top/1/1.png"],
       link: "/shop?d=1", // رابط يوجه لتصميم رقم 1
     },
     {
@@ -80,8 +89,6 @@ const ProductsGrid: React.FC = () => {
         "Playful cat-themed design for men, women, teens, and kids who love funny memes, cute animal art, and quirky feline humor. A great everyday gift for cat moms, cat dads, and pet lovers.",
       images: [
         "/assets/top/2/1.png",
-        "/assets/top/2/2.png",
-        "/assets/top/2/3.png",
       ],
       link: "/shop?d=2"
     },
@@ -93,8 +100,6 @@ const ProductsGrid: React.FC = () => {
         "A design made to show your love, calm the heart, and remind the gentle souls around you that they’re never taken for granted. They’are not ignored — they’are truly first in your heart.",
       images: [
         "/assets/top/3/1.png",
-        "/assets/top/3/2.png",
-        "/assets/top/3/3.png",
       ],
       link: "/shop?d=3"
     },
@@ -106,8 +111,6 @@ const ProductsGrid: React.FC = () => {
         "ICute dog-lover design that captures the playful spirit of your favorite pup. Great for men, women, and kids who love dogs. A perfect everyday gift for pet owners, trainers, groomers, and fur parents.",
       images: [
         "/assets/top/4/1.png",
-        "/assets/top/4/2.png",
-        "/assets/top/4/3.png",
       ],
       link: "/shop?d=4"
     },
@@ -119,8 +122,6 @@ const ProductsGrid: React.FC = () => {
         "Perfect motivational gym shirt for anyone who loves lifting, bodybuilding, and chasing gains. Designed for fitness lovers, powerlifters, and anyone who enjoys pushing their limits.",
       images: [
         "/assets/top/5/1.png",
-        "/assets/top/5/2.png",
-        "/assets/top/5/3.png",
       ],
       link: "/shop?d=5"
     },
@@ -132,8 +133,6 @@ const ProductsGrid: React.FC = () => {
         "Admit It Life Would Be Boring Without Me, Funny Saying Retro. funny saying in retro vintage style is a fun gag gifts.",
       images: [
         "/assets/top/6/1.png",
-        "/assets/top/6/2.png",
-        "/assets/top/6/3.png",
       ],
       link: "/shop?d=6"
     },
@@ -145,8 +144,6 @@ const ProductsGrid: React.FC = () => {
         "Highlight the unsung heroes of the football field with the'Linemen Because Quarterbacks Need Heroes' T-shirt. Perfect for players and fans who value the linemen's role.",
       images: [
         "/assets/top/7/1.png",
-        "/assets/top/7/2.png",
-        "/assets/top/7/3.png",
       ],
       link: "/shop?d=7"
     },
@@ -158,8 +155,6 @@ const ProductsGrid: React.FC = () => {
         "Celebrate sea life with this 'Life's Better with Clowns' T-shirt. Perfect for aquarium enthusiasts, it highlights the magic of clownfish and playful saltwater aquariums.",
       images: [
         "/assets/top/8/1.png",
-        "/assets/top/8/2.png",
-        "/assets/top/8/3.png",
       ],
       link: "/shop?d=8"
     },
