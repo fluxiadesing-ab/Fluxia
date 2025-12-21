@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <div className="relative w-28 h-28">
               <Image 
                 src="/images/logo.jpeg" 
-                alt="FLUXIA Logo" 
+                alt="FLUXIA Design" 
                 fill
                 className="object-contain rounded-sm"
               />
@@ -107,9 +107,6 @@ const Footer: React.FC = () => {
                 <div className="absolute bottom-full mb-2 left-0 w-full bg-[#111] border border-gray-800 rounded shadow-2xl py-2 z-50">
                   <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-800 transition-colors">
                     United States | USD $
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-800 transition-colors">
-                    Canada | CAD $
                   </button>
                 </div>
               )}

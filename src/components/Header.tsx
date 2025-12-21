@@ -88,9 +88,6 @@ const Header: React.FC = () => {
                   <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-800">
                     United States | USD $
                   </a>
-                  <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-800">
-                    Canada | CAD $
-                  </a>
                 </div>
               )}
             </div>
@@ -134,9 +131,6 @@ const Header: React.FC = () => {
                   <div className="mt-2 bg-gray-900 rounded-lg py-2 mx-auto w-56">
                     <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-800">
                       United States | USD $
-                    </a>
-                    <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-800">
-                      Canada | CAD $
                     </a>
                   </div>
                 )}
