@@ -64,47 +64,82 @@ const designsData: Record<string, Design> = {
   },
   "3": {
     id: "3",
-    name: "Nature Collection",
+    name: "Thank you to the kind people",
     designImage: "/assets/designs/3.png",
     allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
     products: [
-      { id: "3-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+      { id: "3-1", title: "Thank you to the kind people Men's Premium T-Shirt", price: 23.99, description: "This premium T-shirt is as close to perfect as can be. It's optimized for all types of print and will quickly become your favorite T-shirt. Soft, comfortable and durable, this is a definite must-own.", image: "/assets/pro/3/1.jpg", link: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people-A6922c48f59adb31b423ff75d?productType=812&sellable=EmkpjpjQxrsDEngYqdwj-812-7&appearance=2" },
+      { id: "3-2", title: "Thank you to the kind people Women's Premium T-Shirt", price: 24.99, description: "The headliner of our Collection is the premium T-shirt. This is as perfect as perfect gets: it's soft yet stretchy, a little longer than a standard tee and figure-flattering. ITEM RUNS SMALL.", image: "/assets/pro/3/2.jpg", link: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people-A6922c48f59adb31b423ff75d?productType=813&sellable=EmkpjpjQxrsDEngYqdwj-813-8&appearance=2" },
+      { id: "3-3", title: "Thank you to the kind people Kids' Premium T-Shirt", price: 20.49, description: "Our collections premium T-shirt should be a big part of any kids' wardrobe. It wears rough and tough for kids who play the same way. Ideal for playing outside or sitting quietly doing homework, the premium T-shirt from the our collection is as versatile and durable as it gets.", image: "/assets/pro/3/3.jpg", link: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people-A6922c48f59adb31b423ff75d?productType=815&sellable=EmkpjpjQxrsDEngYqdwj-815-9&appearance=2" },
+      { id: "3-4", title: "Thank you to the kind people Women's Premium Hoodie", price: 35.99, description: "If you're looking for a top-quality, instant-favorite sweatshirt, you've come to the right place! Our Premium Hoodie from our t Collection is everything you could ask for: it's warm and cozy with a tailored and feminine fit, and it's built to last. This item runs small.", image: "/assets/pro/3/4.jpg", link: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people-A6922c48f59adb31b423ff75d?productType=444&sellable=EmkpjpjQxrsDEngYqdwj-444-23&appearance=2" },
+      { id: "3-5", title: "Thank you to the kind people Toddler Premium T-Shirt", price: 20.49, description: "The grand daddy of our collection, this premium T-shirt is as close to perfect as can be. It's optimized for all types of print and will quickly become you favorite T-shirt. Soft and comfortable, durable and thick, this is a definite must-own and a recommended product.", image: "/assets/pro/3/5.jpg", link: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people-A6922c48f59adb31b423ff75d?productType=814&sellable=EmkpjpjQxrsDEngYqdwj-814-9&appearance=2" },
+      { id: "3-6", title: "Thank you to the kind people 20 oz Water Bottle", price: 18.99, description: "Bring your favorite beverage with you wherever you go in a stylish water bottle. We currently offer these eco-friendly and reusable water bottles in the colors silver and white.", image: "/assets/pro/3/6.jpg", link: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people-A6922c48f59adb31b423ff75d?productType=757&sellable=EmkpjpjQxrsDEngYqdwj-757-39&appearance=1&size=29" },
+      { id: "3-7", title: "Thank you to the kind people Recycled Duffel Bag", price: 21.99, description: "This large, square-shaped duffle bag from recycled polyester is perfect for travel, a trip to the gym, or as a home for your sports equipment. Complete with shoulder strap and reinforced bottom, this bag is built to last.", image: "/assets/pro/3/7.jpg", link: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people-A6922c48f59adb31b423ff75d?productType=636&sellable=EmkpjpjQxrsDEngYqdwj-636-33&appearance=2&size=29" },
+      { id: "3-8", title: "Thank you to the kind people Unisex Baseball T-Shirt", price: 29.99, description: "Play ball! Take to the field or the classroom in this classic contrasting baseball tee by Tultex. An always-fashionable style, this baseball T-shirt is great by itself or as a layer under a T-shirt or hoodie.", image: "/assets/pro/3/8.jpg", link: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people-A6922c48f59adb31b423ff75d?productType=951&sellable=EmkpjpjQxrsDEngYqdwj-951-19&appearance=54" },
     ]
   },
   "4": {
     id: "4",
-    name: "Nature Collection",
+    name: "dog dad",
     designImage: "/assets/designs/4.png",
-    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    allProductsLink: "https://fluxia.myspreadshop.com/dog+dad?idea=6923f4823c285b0e6a5a9597",
     products: [
-      { id: "4-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+      { id: "4-1", title: "dog dad Gildan Heavy Blend Adult Zip Hoodie", price: 36.99, description: "This hoodie checks all the right boxes: Kangaroo pocket, drawstring hood, zipper and comfort all wrapped into one. It’s the ultimate choice for lounging around and dress-down days!", image: "/assets/pro/4/1.jpg", link: "https://fluxia.myspreadshop.com/dog+dad-A6923f4823c285b0e6a5a9597?productType=198&sellable=J14YB85xpvTyDDp7bme2-198-29&appearance=2" },
+      { id: "4-2", title: "dog dad Dog Bandana", price: 14.99, description: "Dogs are a man's best friend and this bandana is a dog's best friend. Your dog has a personality in its own right, so let it shine through with this great accessory.", image: "/assets/pro/4/2.jpg", link: "https://fluxia.myspreadshop.com/dog+dad-A6923f4823c285b0e6a5a9597?productType=611&sellable=J14YB85xpvTyDDp7bme2-611-41&appearance=2&size=29" },
+      { id: "4-3", title: "dog dad Snapback Baseball Cap", price: 20.49, description: "This snapback cap comes with instant street cred. A must-have for anyone seeking that urban style, the snap-back comes with a flat but flexible brim. Throw this on as a complement to whatever look you’re going for.", image: "/assets/pro/4/3.jpg", link: "https://fluxia.myspreadshop.com/dog+dad-A6923f4823c285b0e6a5a9597?productType=803&sellable=J14YB85xpvTyDDp7bme2-803-34&appearance=2&size=29" },
+      { id: "4-4", title: "dog dad Women's Moisture Wicking Performance T-Shirt", price: 25.49, description: "This performance tee has everything you’ll need for the perfect workout. It’s roomy, lightweight and highly breathable thanks to the PosiCharge moisture-wicking technology. With anti-fading features, your color and print will be protected wash after wash.", image: "/assets/pro/4/4.jpg", link: "https://fluxia.myspreadshop.com/dog+dad-A6923f4823c285b0e6a5a9597?productType=1341&sellable=J14YB85xpvTyDDp7bme2-1341-8&appearance=2" },
+      { id: "4-5", title: "dog dad Unisex Joggers", price: 32.99, description: "These ultra-comfy mid-weight unisex joggers are ideal for lounging at home or keeping you warm for your workout. No matter your style, these cozy joggers are an essential basic.", image: "/assets/pro/4/5.jpg", link: "https://fluxia.myspreadshop.com/dog+dad-A6923f4823c285b0e6a5a9597?productType=1446&sellable=J14YB85xpvTyDDp7bme2-1446-219&appearance=309" },
+      { id: "4-6", title: "dog dad Women's Premium Hoodie", price: 35.99, description: "If you're looking for a top-quality, instant-favorite sweatshirt, you've come to the right place! Our Premium Hoodie from our t Collection is everything you could ask for: it's warm and cozy with a tailored and feminine fit, and it's built to last. This item runs small.", image: "/assets/pro/4/6.jpg", link: "https://fluxia.myspreadshop.com/dog+dad-A6923f4823c285b0e6a5a9597?productType=444&sellable=J14YB85xpvTyDDp7bme2-444-23&appearance=2" },
+      { id: "4-7", title: "dog dad Kid's Football Tee", price: 22.99, description: "Your kid can take a trip to yesteryear with this style-refined vintage T-shirt from LAT Apparel. This tee makes for an incredibly soft and comfortable wear, while features like the EasyTear™ label and double-needle stitching ensure a durable and fashionable wear for years to come.", image: "/assets/pro/4/7.jpg", link: "https://fluxia.myspreadshop.com/dog+dad-A6923f4823c285b0e6a5a9597?productType=1398&sellable=J14YB85xpvTyDDp7bme2-1398-9&appearance=54" },
+      { id: "4-8", title: "dog dad Unisex Stars & Stripes T-Shirt", price: 28.49, description: "Proudly wear your stars and stripes in this all-American T-shirt crafted from breathable cotton.", image: "/assets/pro/4/8.jpg", link: "https://fluxia.myspreadshop.com/dog+dad-A6923f4823c285b0e6a5a9597?productType=1454&sellable=J14YB85xpvTyDDp7bme2-1454-8&appearance=1" },
     ]
   },
   "5": {
     id: "5",
-    name: "Nature Collection",
+    name: "Let the Gains Begin",
     designImage: "/assets/designs/5.png",
-    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    allProductsLink: "https://fluxia.myspreadshop.com/let+the+gains+begin?idea=68ff70e608663611d20d65c5",
     products: [
-      { id: "5-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+      { id: "5-1", title: "Let the Gains Begin Women's Premium T-Shirt", price: 24.99, description: "The headliner of our Collection is the premium T-shirt. This is as perfect as perfect gets: it's soft yet stretchy, a little longer than a standard tee and figure-flattering. ITEM RUNS SMALL.", image: "/assets/pro/5/1.jpg", link: "https://fluxia.myspreadshop.com/let+the+gains+begin-A68ff70e608663611d20d65c5?productType=813&sellable=QwNLOzgDLMtjaLxE893Z-813-8&appearance=2" },
+      { id: "5-2", title: "Let the Gains Begin Adjustable Apron", price: 19.49, description: "The last layer of defense against spillage of all sorts, this adjustable apron is a wonderful gift for yourself or a loved one. With plenty of coverage and pockets for utensils, forget cooking classes... this apron is all you need to become a gourmet chef!", image: "/assets/pro/5/2.jpg", link: "https://fluxia.myspreadshop.com/let+the+gains+begin-A68ff70e608663611d20d65c5?productType=1186&sellable=QwNLOzgDLMtjaLxE893Z-1186-35&appearance=2&size=29" },
+      { id: "5-3", title: "Let the Gains Begin Full Color Mug", price: 15.99, description: "A colorful companion for your favorite brew. Good for all types of beverages, this classic container is a great way to make your hot cocoa cool again.", image: "/assets/pro/5/3.jpg", link: "https://fluxia.myspreadshop.com/let+the+gains+begin-A68ff70e608663611d20d65c5?productType=949&sellable=QwNLOzgDLMtjaLxE893Z-949-32&appearance=2&size=29" },
+      { id: "5-4", title: "Let the Gains Begin Men's T-Shirt", price: 20.49, description: "Discover our Men's T-Shirt, crafted with sustainably and fairly grown cotton for an eco-friendly choice that doesn't skimp on style. Featuring double-needle stitching throughout, a seamless rib at the neck, and taped shoulder-to-shoulder construction for enhanced structure. Available in multiple colors and a wide range of sizes.", image: "/assets/pro/5/4.jpg", link: "https://fluxia.myspreadshop.com/let+the+gains+begin-A68ff70e608663611d20d65c5?productType=210&sellable=QwNLOzgDLMtjaLxE893Z-210-7&appearance=2" },
+      { id: "5-5", title: "Let the Gains Begin Unisex Crewneck Sweatshirt", price: 34.99, description: "This classic has stood the test of time. Always in fashion, this crewneck sweatshirt by Gildan is perfect as an outer, under or single layer. Soft and comfortable, this stand-by is a must.", image: "/assets/pro/5/5.jpg", link: "https://fluxia.myspreadshop.com/let+the+gains+begin-A68ff70e608663611d20d65c5?productType=512&sellable=QwNLOzgDLMtjaLxE893Z-512-26&appearance=2" },
+      { id: "5-6", title: "Let the Gains Begin Men's V-Neck T-Shirt by Bella + Canvas", price: 25.49, description: "Funny how throwing a little V in the neckline can make a T-shirt look classier, but it totally does. Nice enough to wear to the club and casual enough to wear around the house, this super soft jersey cotton V-neck is versatility at its finest.", image: "/assets/pro/5/6.jpg", link: "https://fluxia.myspreadshop.com/let+the+gains+begin-A68ff70e608663611d20d65c5?productType=686&sellable=QwNLOzgDLMtjaLxE893Z-686-12&appearance=708" },
+      { id: "5-7", title: "Let the Gains Begin Stanley/Stella Drummer Unisex Organic Hoodie", price: 38.49, description: "The mid-weight organic hoodie from Stanley/Stella: cozy, high-end and made responsibly. A classic made for wearing time and time again.", image: "/assets/pro/5/7.jpg", link: "https://fluxia.myspreadshop.com/let+the+gains+begin-A68ff70e608663611d20d65c5?productType=2930&sellable=QwNLOzgDLMtjaLxE893Z-2930-22&appearance=2" },
+      { id: "5-8", title: "Let the Gains Begin Washed Unisex T-Shirt", price: 27.99, description: "Getting the kiddos dressed for school or play just got easier. Reach for the Hanes Youth T-Shirt on busy mornings, and your kids will be ready for whatever comes next! This original style features a classic fit, tear-away tag and comfortable fabric to ensure maximum versatility.", image: "/assets/pro/5/8.jpg", link: "https://fluxia.myspreadshop.com/let+the+gains+begin-A68ff70e608663611d20d65c5?productType=3212&sellable=QwNLOzgDLMtjaLxE893Z-3212-7&appearance=1519" },
     ]
   },
   "6": {
     id: "6",
-    name: "Nature Collection",
+    name: "Admit It Life Would Be Boring Without Me, Funny",
     designImage: "/assets/designs/6.png",
-    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    allProductsLink: "",
     products: [
-      { id: "6-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+      { id: "6-1", title: "Kids' Premium T-Shirt", price: 20.49, description: "Our collections premium T-shirt should be a big part of any kids' wardrobe. It wears rough and tough for kids who play the same way. Ideal for playing outside or sitting quietly doing homework, the premium T-shirt from the our collection is as versatile and durable as it gets.", image: "/assets/pro/6/1.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=815&sellable=ybwdGk2dMphg7w1bBkjD-815-9&appearance=648" },
+      { id: "6-2", title: "Men's Premium Tank", price: 24.99, description: "Hit the beach, the street or the gym in this soft, durable tank from the our collection.", image: "/assets/pro/6/2.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=916&sellable=ybwdGk2dMphg7w1bBkjD-916-15&appearance=648" },
+      { id: "6-3", title: "Kids‘ Premium Hoodie", price: 33.49, description: "If you’re looking for a top-quality, instant-favorite sweatshirt for any child, you’ve come to the right place! Our Premium Hoodie from the Spreadshirt Collection is everything you could ask for: it’s warm and cozy, heavyweight and roomy, and built to last. ITEM RUNS SMALL.", image: "/assets/pro/6/3.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=654&sellable=ybwdGk2dMphg7w1bBkjD-654-24&appearance=4" },
+      { id: "6-4", title: "Women's T-Shirt", price: 23.49, description: "Discover our Women's T-Shirt, crafted with sustainably and fairly grown USA cotton for an eco-friendly choice that doesn't skimp on style. This T-shirt features a feminine mid-scoop neck, cap sleeves, and a slightly tapered fit for a flattering silhouette. Durable double-needle stitching and seamless rib at the neck ensure comfort and longevity. Ideal for any casual occasion, this t-shirt combines ethical manufacturing with everyday versatility.", image: "/assets/pro/6/4.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=347&sellable=ybwdGk2dMphg7w1bBkjD-347-8&appearance=386" },
+      { id: "6-5", title: "Organic Contrast SS Baby Bodysuit", price: 21.99, description: "This sweet baby bodysuit is made with organic cotton for a natural, breathable and soft short-sleeved outfit. The subtle color contrast adds that extra little touch of cuteness. Dressing even the squirmiest baby is a breeze with the envelope-style neckline and easy snap closures.", image: "/assets/pro/6/5.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=1268&sellable=ybwdGk2dMphg7w1bBkjD-1268-10&appearance=796" },
+      { id: "6-6", title: "Baby Fleece One Piece", price: 24.99, description: "Your little one will feel like a real lucky bunny in this cute bodysuit. Cozy ribbed cuffs help create the ultimate comfortable fit. Featuring an easy-on, easy-off snap tape closure, it’ll make dressing your baby child’s play.", image: "/assets/pro/6/6.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=2426&sellable=ybwdGk2dMphg7w1bBkjD-2426-204&appearance=2" },
+      { id: "6-7", title: "Baby 5 Star Print One Piece", price: 19.99, description: "Dress your little star in our charming baby bodysuit adorned with a delightful star pattern. With an innovative three snap closure for easy changing and a comfortable fit that allows your baby to move freely. This adorable outfit will keep your little one looking cute and feeling cozy.", image: "/assets/pro/6/7.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=3027&sellable=ybwdGk2dMphg7w1bBkjD-3027-10&appearance=1242" },
+      { id: "6-8", title: "Toddler Girls Flutter T-shirt", price: 21.99, description: "Dress your little one in the charming Toddler Girls Flutter T-shirt, perfect for any occasion. This tee features double needle ribbed binding on the collar and bottom hem for enhanced durability and a comfortable fit. The double-layered flutter sleeves with serged edges add a whimsical touch, while coverstitched armholes and side seams ensure the shirt holds up to active play. Stylish and sturdy, this shirt blends practicality with playful flair.", image: "/assets/pro/6/8.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=3154&sellable=ybwdGk2dMphg7w1bBkjD-3154-9&appearance=2" },
     ]
   },
   "7": {
     id: "7",
     name: "Nature Collection",
     designImage: "/assets/designs/7.png",
-    allProductsLink: "https://fluxia.myspreadshop.com/thank+you+to+the+kind+people?idea=6922c48f59adb31b423ff75d",
+    allProductsLink: "",
     products: [
-      { id: "7-1", title: "", price: 39.99, description: "", image: "/assets/pro/4/1.png", link: "" },
+      { id: "7-1", title: "", price: 39.99, description: "", image: "/assets/pro/7/1.jpg", link: "" },
+      { id: "7-2", title: "", price: 39.99, description: "", image: "/assets/pro/7/2.jpg", link: "" },
+      { id: "7-3", title: "", price: 39.99, description: "", image: "/assets/pro/7/3.jpg", link: "" },
+      { id: "7-4", title: "", price: 39.99, description: "", image: "/assets/pro/7/4.jpg", link: "" },
+      { id: "7-5", title: "", price: 39.99, description: "", image: "/assets/pro/7/5.jpg", link: "" },
+      { id: "7-6", title: "", price: 39.99, description: "", image: "/assets/pro/7/6.jpg", link: "" },
+      { id: "7-7", title: "", price: 39.99, description: "", image: "/assets/pro/7/7.jpg", link: "" },
+      { id: "7-8", title: "", price: 39.99, description: "", image: "/assets/pro/7/8.jpg", link: "" },
     ]
   },
   "8": {
@@ -183,7 +218,7 @@ const designsData: Record<string, Design> = {
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
 <Link href={product.link} className="block h-full">
-  <article className="group bg-white overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg h-full border border-gray-100">
+  <article className="group bg-white overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-full border border-gray-100">
     
     {/* حاوية الصورة: تم تغيير h-96 إلى aspect-square لضمان التناسب 1:1 */}
     <div className="relative w-full aspect-square overflow-hidden bg-gray-50">
@@ -344,7 +379,7 @@ function ShopContent() {
       {/* شبكة المنتجات */}
       <section className="py-12">
         <div className="container mx-auto px-1  md:px-2">
-          <div className="mb-8">
+          <div className="mb-8 px-4">
             <h2 className="text-2xl font-bold text-gray-800">
               {designsData[selectedDesign]?.name}
             </h2>
