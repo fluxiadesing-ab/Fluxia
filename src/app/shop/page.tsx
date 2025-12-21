@@ -114,7 +114,7 @@ const designsData: Record<string, Design> = {
     id: "6",
     name: "Admit It Life Would Be Boring Without Me, Funny",
     designImage: "/assets/designs/6.png",
-    allProductsLink: "",
+    allProductsLink: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me%2C+funny?idea=68ebee5cc20b5110650d530c",
     products: [
       { id: "6-1", title: "Kids' Premium T-Shirt", price: 20.49, description: "Our collections premium T-shirt should be a big part of any kids' wardrobe. It wears rough and tough for kids who play the same way. Ideal for playing outside or sitting quietly doing homework, the premium T-shirt from the our collection is as versatile and durable as it gets.", image: "/assets/pro/6/1.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=815&sellable=ybwdGk2dMphg7w1bBkjD-815-9&appearance=648" },
       { id: "6-2", title: "Men's Premium Tank", price: 24.99, description: "Hit the beach, the street or the gym in this soft, durable tank from the our collection.", image: "/assets/pro/6/2.jpg", link: "https://fluxia.myspreadshop.com/admit+it+life+would+be+boring+without+me+funny-A68ebee5cc20b5110650d530c?productType=916&sellable=ybwdGk2dMphg7w1bBkjD-916-15&appearance=648" },
