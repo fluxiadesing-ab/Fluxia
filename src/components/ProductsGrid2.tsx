@@ -122,7 +122,6 @@ const ProductsGrid2: React.FC = () => {
     <section className="py-8 md:py-16 bg-white mt-8">
       <div className="container mx-auto px-2 sm:px-6 lg:px-8">
         {/* Products Grid */}
-        {/* التعديل هنا: gap-3 للجوال لكي يعطي مساحة أكبر للكارت، و gap-6 للكبير */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />

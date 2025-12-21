@@ -5,7 +5,6 @@ import React from "react";
 import Image from "next/image";
 
 const Hero: React.FC = () => {
-  // يمكنك استبدال هذه بمسارات صورك الفعلية
   const products = [
     { id: 1, image: "/images/assets/image1.png", alt: "Stay Chill Cat" },
     { id: 2, image: "/images/assets/image2.png", alt: "Dog Dad" },
@@ -22,7 +21,6 @@ const Hero: React.FC = () => {
 
   ];
 
-  // نضاعف المنتجات للحصول على حركة سلسة
   const duplicatedProducts = [...products, ...products];
   
   return (

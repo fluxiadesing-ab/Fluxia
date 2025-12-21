@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# موقع Fluxia Design
 
-## Getting Started
+موقع Fluxia Design هو موقع عرض منتجات (Landing Page) مبني باستخدام Next.js،  
+ويعمل على جميع الأجهزة (كمبيوتر – جوال – تابلت).
 
-First, run the development server:
+---
 
-```bash
+## متطلبات التشغيل
+
+قبل تشغيل الموقع، يجب تثبيت المتطلبات التالية على الجهاز:
+
+- Node.js (الإصدار 18 أو أحدث)
+
+يمكن تحميله من الموقع الرسمي:
+https://nodejs.org
+
+بعد تثبيت Node.js لا يلزم أي إعدادات إضافية.
+
+---
+
+## طريقة تشغيل الموقع محليًا
+
+1. افتح مجلد المشروع على جهازك
+2. افتح Terminal
+   - الاختصار: Ctrl + J
+   - أو من القائمة داخل محرر الأكواد (VS Code)
+
+3. نفّذ الأوامر التالية بالترتيب:
+
+npm install
+
+ثم:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. بعد التشغيل، افتح المتصفح وانتقل إلى الرابط التالي:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## هيكل المشروع
+هذه هي الاشياء المهم فقط حالية
 
-To learn more about Next.js, take a look at the following resources:
+FLUXIADESIGN 
+│
+src
+├── app
+│   ├── page.tsx
+│   │   الصفحة الرئيسية (Landing Page) هذه هي اول صفحه تظهر عند الدخول الى https://fluxiadesign.com
+│   │
+│   ├── contact
+│   │   └── page.tsx
+│   │       صفحة التواصل
+│   ├── about
+│   │   └── page.tsx
+│   │       حول الموقع
+│   ├── privacy
+│   │   └── page.tsx
+│   │       هذه سياسة الخصوصيه 
+│   ├── story
+│   │   └── page.tsx
+│   │       صفحة قصة المتجر
+│   ├── terms
+│   │   └── page.tsx
+│   │       صفحة شروط الاستخدام
+│   ├── refund
+│   │   └── page.tsx
+│   │       صفحة سياسة الاسترجاع و الاستبدال
+│   │
+│   └── layout.tsx
+│       الهيكل العام للموقع هنا ممكن تغير الخطوط لاكن فيه حاجات مهم ما موجوده في الراس لا تلمس
+│
+├── components
+│   ├── Header.tsx
+│   │   الهيدر (أعلى الموقع)
+│   │
+│   ├── Hero.tsx
+│   │   هذا هو المكون الذي يظهر تحت الرئس مباشره مكتوب فيه (A wide range of stunning designs) وفيه صور متحركه
+│   │
+│   ├── ProductsGrid.tsx
+│   │   هنا توجد 8 منتجات 
+│   │
+│   ├── InfiniteSlider.tsx
+│   │   سلايدر المنتجات المتحركه مع روابط مباشرة للمتجر 
+│   │
+│   ├── ProductsGrid.tsx
+│   │   وهنا توجد 4 منتجات
+│   │
+│   ├── Emalien.tsx
+│   │   هذا هو مكون الي فيه منطق اخذ ايميلات العملاء غير مستخدم حاليا
+│   │
+│   ├── DHero.tsx
+│   │   هنا توجد ثلاث صور مع النص هذا(Turn your feelings........)
+│   │
+│   └── Footer.tsx
+│       الفوتر (أسفل الموقع)
+│
+├── public
+│   ├── assets
+│   │   هنا صور التصاميم و الموديل وكل شى خاص بصفحة /shop/
+│   │       
+│   │
+│   └── images
+│   │    └── logo.jpeg
+│   │    │   شعار الموقع
+│   │    │
+│   │    └── payment
+│   │        صور بوبات الدفع
+│   │ 
+│   └── favicon.icon
+│           هذه ايقونه خاصه بالتبويبات
+│
+│
+├── README.md
+│   ملف الشرح هذا
+│
+└── package.json
+    إعدادات المشروع والمتطلبات
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ملاحظات مهمة
 
-## Deploy on Vercel
+- الموقع لا يستخدم قاعدة بيانات
+- جميع المنتجات وروابطها معرفة بشكل مباشر داخل الكود يمكن تغييرها عادي
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+

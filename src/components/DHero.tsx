@@ -3,9 +3,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-/* =========================
-   Image Box Component
-   ========================= */
 type ImageBoxProps = {
   src: string;
   alt: string;
@@ -28,9 +25,6 @@ const ImageBox: React.FC<ImageBoxProps> = ({ src, alt, className }) => {
   );
 };
 
-/* =========================
-   Hero Component
-   ========================= */
 const DHero: React.FC = () => {
   return (
     <section className="relative bg-neutral-900 text-white overflow-hidden">

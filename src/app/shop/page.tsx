@@ -3,7 +3,7 @@
 import React, { useState, useEffect, Suspense, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams, useRouter } from 'next/navigation'; // استيراد أدوات التحكم بالروابط
+import { useSearchParams, useRouter } from 'next/navigation'; 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -21,7 +21,7 @@ interface Design {
   id: string;
   name: string;
   designImage: string;
-  allProductsLink: string; // الحقل الجديد للرابط الخاص بكل مجموعة
+  allProductsLink: string; 
   products: Product[];
 }
 
@@ -225,7 +225,6 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
 <Link href={product.link} className="block h-full">
   <article className="group bg-white overflow-hidden border border-gray-300 hover:shadow-xl transition-all duration-300 h-full border border-gray-100">
     
-    {/* حاوية الصورة: تم تغيير h-96 إلى aspect-square لضمان التناسب 1:1 */}
     <div className="relative w-full aspect-square overflow-hidden bg-gray-50">
       <Image 
         src={product.image} 
@@ -235,7 +234,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
       />
     </div>
 
- <div className="p-3 md:p-6"> {/* تقليل الحواف الداخلية على الجوال */}
+ <div className="p-3 md:p-6">
   
   <h3 className="text-sm md:text-lg font-medium text-gray-900 mb-1 md:mb-3 line-clamp-3 group-hover:text-blue-600 transition-colors text-center">
     {product.title}
@@ -267,7 +266,7 @@ function ShopContent() {
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [isMoved, setIsMoved] = useState(false); // للتفريق بين السحب والنقر
+  const [isMoved, setIsMoved] = useState(false); 
 
   useEffect(() => {
     if (designQuery && designsData[designQuery]) {
@@ -303,10 +302,9 @@ function ShopContent() {
     const x = e.pageX - sliderRef.current.offsetLeft;
     const walk = (x - startX) * 2;
     
-    // إذا تحرك المستخدم أكثر من 5 بكسل، نعتبره سحباً وليس نقراً
     if (Math.abs(walk) > 5) {
       setIsMoved(true);
-      e.preventDefault(); // منع أي سلوك افتراضي فقط عند التحرك الفعلي
+      e.preventDefault(); 
       sliderRef.current.scrollLeft = scrollLeft - walk;
     }
   };
@@ -359,7 +357,7 @@ function ShopContent() {
                       <Image
                         src={design.designImage}
                         alt={design.name}
-                        fill // أهم خاصية: منع تداخل أحداث الصورة مع السحب
+                        fill 
                         className="object-contain p-2 pointer-events-none select-none"
                         draggable={false}
                       />
@@ -367,6 +365,7 @@ function ShopContent() {
                   </button>
                 ))}
 
+                {/* --- زر "Customize" --- */}
                 <Link
                   href="https://fluxia.myspreadshop.com/create"
                   className="flex-shrink-0 group outline-none no-underline"
@@ -394,12 +393,12 @@ function ShopContent() {
                   </div>
                 </Link>
 
-                {/* --- زر "See All" الجديد في نهاية الشريط --- */}
+                {/* --- زر "See All" --- */}
                 <Link
-                  href="https://fluxia.myspreadshop.com/all?listModeOverride=DESIGN" // ضع رابط متجرك الرئيسي هنا
+                  href="https://fluxia.myspreadshop.com/all?listModeOverride=DESIGN" 
                   className="flex-shrink-0 group outline-none no-underline"
                   onDragStart={(e) => e.preventDefault()}
-                  onClick={(e) => isMoved && e.preventDefault()} // منع الانتقال إذا كان سحباً
+                  onClick={(e) => isMoved && e.preventDefault()} 
                 >
                   <div className="flex flex-col items-center justify-center w-18 h-18 md:w-24 md:h-24 rounded-lg bg-gray-100 border border-dashed border-gray-400 mt-2 transition-all group-hover:bg-black group-hover:border-black group-active:scale-95">
                     <span className="text-[10px] md:text-xs font-bold text-gray-600 group-hover:text-white uppercase tracking-tighter">

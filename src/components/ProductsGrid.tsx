@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; // 1. استيراد مكون Link
+import Link from "next/link"; 
 
 interface Product {
   id: number;
@@ -10,7 +10,7 @@ interface Product {
   price: number;
   description: string;
   images: string[];
-  link: string; // 2. إضافة حقل الرابط في الواجهة (Interface)
+  link: string; 
 }
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
@@ -26,7 +26,6 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   // }, [product.images.length]);
 
   return (
-    // 3. تغليف الكارت بالكامل بـ Link
     <Link href={product.link} className="block group">
       <article className="bg-white overflow-hidden shadow-md hover:border-gray-600 border border-transparent rounded-lg transition-all duration-300 h-full">
         {/* Image Container */}
@@ -71,7 +70,6 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
 };
 
 const ProductsGrid: React.FC = () => {
-  // 4. إضافة روابط المنتجات هنا (مثلاً روابط لصفحة التصميم المعني d=1)
   const products: Product[] = [
     {
       id: 1,
@@ -164,7 +162,6 @@ const ProductsGrid: React.FC = () => {
     <section className="py-8 md:py-16 bg-white mt-8">
       <div className="container mx-auto px-2 sm:px-6 lg:px-8">
         {/* Products Grid */}
-        {/* التعديل هنا: gap-3 للجوال لكي يعطي مساحة أكبر للكارت، و gap-6 للكبير */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />

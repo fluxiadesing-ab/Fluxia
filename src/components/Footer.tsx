@@ -13,7 +13,6 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-start">
           
-          {/* Section 1: Logo & Slogan (المكان الجديد) */}
           <div className="flex flex-col space-y-4">
             <div className="relative w-28 h-28">
               <Image 
@@ -87,11 +86,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Section: Copyright & Country Selector (المكان الجديد) */}
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             
-            {/* Country/Region Selector (نقل إلى هنا) */}
             <div className="relative">
               <p className="text-[10px] text-gray-300 uppercase mb-2">Country/region</p>
               <button
