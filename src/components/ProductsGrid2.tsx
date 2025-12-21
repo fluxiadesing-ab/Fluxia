@@ -10,6 +10,7 @@ interface Product {
   price: number;
   description: string;
   images: string[];
+  link: string;
 }
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
@@ -25,7 +26,8 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   // }, [product.images.length]);
 
   return (
-    <article className="group bg-white overflow-hidden shadow-md border border-gray-400 hover:border-gray-600 rounded-lg transition-colors hover:shadow-lg">
+    <Link href={product.link} className="block group">
+    <article className=" bg-white overflow-hidden shadow-md border border-gray-400 hover:border-gray-600 rounded-lg transition-colors hover:shadow-lg h-full">
       {/* Image Container */}
       <div className="relative aspect-square overflow-hidden bg-gray-300   ">
         <div className="relative aspect-square bg-white flex items-center justify-center overflow-hidden">
@@ -33,9 +35,6 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
             src={product.images[currentImageIndex]}
             alt={product.title}
             fill
-            // التعديل هنا:
-            // p-2 : حواواف صغيرة جداً للجوال لتأخذ الصورة راحتها وتكبر
-            // md:p-14 : في الشاشات المتوسطة والكبيرة تعود الحواف الكبيرة كما تحب
             className="object-contain p-2 md:p-8 group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={product.id <= 4}
@@ -67,6 +66,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
         </p>
       </div>
     </article>
+    </Link>
   );
 };
 
@@ -83,6 +83,7 @@ const ProductsGrid2: React.FC = () => {
         "/assets/down/1/2.png",
         "/assets/down/1/3.png",
       ],
+      link: "/shop?d=9"
     },
     {
       id: 2,
@@ -95,6 +96,7 @@ const ProductsGrid2: React.FC = () => {
         "/assets/down/2/2.png",
         "/assets/down/2/3.png",
       ],
+      link: "/shop?d=10"
     },
     {
       id: 3,
@@ -107,6 +109,7 @@ const ProductsGrid2: React.FC = () => {
         "/assets/down/3/2.png",
         "/assets/down/3/3.png",
       ],
+      link: "/shop?d=11"
     },
     {
       id: 4,
@@ -119,6 +122,7 @@ const ProductsGrid2: React.FC = () => {
         "/assets/down/4/2.png",
         "/assets/down/4/3.png",
       ],
+      link: "/shop?d=12"
     },
   ];
 
@@ -134,12 +138,12 @@ const ProductsGrid2: React.FC = () => {
         </div>
       </div>
       {/* View More */}
-      <div className="mt-8 flex justify-center">
+      <div className="mt-12 flex justify-center">
         <Link
-          href="/shop"
+          href="https://fluxia.myspreadshop.com/all?listModeOverride=DESIGN"
           className="text-sm md:text-base font-medium text-white bg-black p-3 mt-4 hover:border border-black hover:bg-white hover:text-black transition-colors"
         >
-          View more
+          SEE All DESIGNS
         </Link>
       </div>
     </section>

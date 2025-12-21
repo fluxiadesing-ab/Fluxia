@@ -27,7 +27,6 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
               src={product.images[currentImageIndex]}
               alt={product.title}
               fill
-              unoptimized // إضافة هذه إذا كانت الصور من روابط خارجية أو أصول ثابتة بسيطة
               className="object-contain p-2 md:p-12 group-hover:scale-105 transition-transform duration-300"
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               priority={product.id <= 4}
@@ -110,7 +109,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/4/2.png",
         "/assets/top/4/3.png",
       ],
-      link: "/shop?d=2"
+      link: "/shop?d=4"
     },
     {
       id: 5,
@@ -123,7 +122,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/5/2.png",
         "/assets/top/5/3.png",
       ],
-      link: "/shop?d=2"
+      link: "/shop?d=5"
     },
     {
       id: 6,
@@ -136,7 +135,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/6/2.png",
         "/assets/top/6/3.png",
       ],
-      link: "/shop?d=2"
+      link: "/shop?d=6"
     },
     {
       id: 7,
@@ -149,7 +148,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/7/2.png",
         "/assets/top/7/3.png",
       ],
-      link: "/shop?d=2"
+      link: "/shop?d=7"
     },
     {
       id: 8,
@@ -162,7 +161,7 @@ const ProductsGrid: React.FC = () => {
         "/assets/top/8/2.png",
         "/assets/top/8/3.png",
       ],
-      link: "/shop?d=2"
+      link: "/shop?d=8"
     },
   ];
 

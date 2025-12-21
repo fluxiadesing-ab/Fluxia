@@ -79,7 +79,6 @@ const Footer: React.FC = () => {
                     alt={method} 
                     width={35} 
                     height={20}
-                    unoptimized
                     className="object-contain grayscale hover:grayscale-0 transition-all"
                   />
                 </div>

@@ -21,7 +21,7 @@ export default function Home() {
         <InfiniteSlider />
         <ProductsGrid2 />
         <DHero />
-        <Email />
+        {/*<Email />*/}
         <Footer />
       </main>
     </div>

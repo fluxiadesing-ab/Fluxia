@@ -32,15 +32,19 @@ const Header: React.FC = () => {
       </div>
 
       {/* Main Header Container */}
-      <div className="container mx-auto px-6 py-10">
+      <div className="container mx-auto px-6 md:py-10 py-6">
         <div className="flex items-center justify-between relative min-h-[60px]">
-          
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden z-50 relative hover:text-gray-300 transition-colors" aria-label="Menu"
+            className="lg:hidden z-50 relative hover:text-gray-300 transition-colors"
+            aria-label="Menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
 
           {/* Navigation Links - Desktop */}
@@ -63,12 +67,16 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <Image
-              src="/images/logo.jpeg" 
+              src="/images/logo.jpeg"
               alt="FLUXIA Design"
               width={140}
               height={140}
               priority
-              className="object-contain"
+              className="
+      object-contain
+      w-24 h-24
+      sm:w-26 sm:h-26
+      md:w-32 md:h-32"
             />
           </div>
 
@@ -85,14 +93,20 @@ const Header: React.FC = () => {
 
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-56 bg-gray-900 rounded-lg shadow-lg py-2 z-50">
-                  <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-800">
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm hover:bg-gray-800"
+                  >
                     United States | USD $
                   </a>
                 </div>
               )}
             </div>
 
-            <button className="hover:text-gray-300 transition-colors" aria-label="Search">
+            <button
+              className="hover:text-gray-300 transition-colors"
+              aria-label="Search"
+            >
               <Search className="w-5 h-5" />
             </button>
           </div>
@@ -116,7 +130,7 @@ const Header: React.FC = () => {
                   {link.name}
                 </Link>
               ))}
-              
+
               {/* Mobile Currency Dropdown */}
               <div className="pt-6 border-t border-gray-800 w-full text-center">
                 <button
@@ -126,10 +140,13 @@ const Header: React.FC = () => {
                   <span>United States | USD $</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                
+
                 {isDropdownOpen && (
                   <div className="mt-2 bg-gray-900 rounded-lg py-2 mx-auto w-56">
-                    <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-800">
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm hover:bg-gray-800"
+                    >
                       United States | USD $
                     </a>
                   </div>
