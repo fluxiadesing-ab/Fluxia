@@ -12,6 +12,32 @@ interface Product {
   images: string[];
   link: string;
 }
+const trackAndGo = (
+  e: React.MouseEvent,
+  url: string,
+  productId: number,
+  productName: string,
+  price: number
+) => {
+  e.preventDefault();
+
+  if (typeof window !== "undefined" && (window as any).fbq) {
+    (window as any).fbq("track", "ViewContent", {
+      content_ids: [productId],
+      content_name: productName,
+      content_type: "product",
+      value: price,
+      currency: "USD",
+    });
+
+    (window as any).fbq("track", "InitiateCheckout");
+  }
+
+  setTimeout(() => {
+    window.location.assign(url);
+  }, 300);
+};  
+
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -26,7 +52,18 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   // }, [product.images.length]);
 
   return (
-    <Link href={product.link} className="block group">
+    <Link   href={product.link}
+  className="block group"
+  onClick={(e) =>
+    trackAndGo(
+      e,
+      product.link,
+      product.id,
+      product.title,
+      product.price
+    )
+  }
+>
     <article className=" bg-white overflow-hidden shadow-md border border-gray-400 hover:border-gray-600 rounded-lg transition-colors hover:shadow-lg h-full">
       {/* Image Container */}
       <div className="relative aspect-square overflow-hidden bg-gray-300   ">
