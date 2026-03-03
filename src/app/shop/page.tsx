@@ -25,6 +25,31 @@ interface Design {
   products: Product[];
 }
 
+const trackAndGo = (
+  url: string,
+  productId: string | number,
+  productName: string,
+  price: number
+) => {
+
+  if (typeof window !== "undefined" && (window as any).fbq) {
+
+    (window as any).fbq("track", "ViewContent", {
+      content_ids: [productId],
+      content_name: productName,
+      content_type: "product",
+      value: price,
+      currency: "USD",
+    });
+
+    (window as any).fbq("track", "InitiateCheckout");
+  }
+
+  // وقت كافي حقيقي للإرسال
+  setTimeout(() => {
+    window.location.assign(url);
+  }, 300); // ← غيرها من 150 إلى 400
+};
 // --- Data Structure ---
 const designsData: Record<string, Design> = {
   "1": {
@@ -220,9 +245,18 @@ const designsData: Record<string, Design> = {
     ]
   },
 };
-
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
-<Link href={product.link} className="block h-full">
+<div
+  className="block h-full cursor-pointer"
+  onClick={() =>
+    trackAndGo(
+      product.link,
+      product.id,
+      product.title,
+      product.price
+    )
+  }
+>
   <article className="group bg-white overflow-hidden border border-gray-300 hover:shadow-xl transition-all duration-300 h-full border border-gray-100">
     
     <div className="relative w-full aspect-square overflow-hidden bg-gray-50">
@@ -248,7 +282,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
   </p>
 </div>
   </article>
-</Link>
+</div>
 );
 
 // المكون الأساسي للمحتوى لفصله من أجل Suspense
