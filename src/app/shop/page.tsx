@@ -42,7 +42,7 @@ const trackAndGo = (
       currency: "USD",
     });
 
-    (window as any).fbq("track", "InitiateCheckout");
+   
   }
 
   // وقت كافي حقيقي للإرسال
