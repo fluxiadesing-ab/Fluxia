@@ -31,7 +31,7 @@ const trackAndGo = (
       currency: "USD",
     });
 
-    (window as any).fbq("track", "InitiateCheckout");
+    
   }
 
   setTimeout(() => {
