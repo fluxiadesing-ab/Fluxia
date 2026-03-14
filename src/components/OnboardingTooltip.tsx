@@ -45,13 +45,14 @@ export const OnboardingTooltip = ({ step: targetStep, message, position = "botto
                 onClick={next}
                 className="bg-black text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-gray-800"
               >
-                تم ✓
+                  Got it
+
               </button>
               <button
                 onClick={dismiss}
                 className="text-gray-400 text-sm hover:text-gray-600"
               >
-                تخطي
+                Skip
               </button>
             </div>
           </div>
