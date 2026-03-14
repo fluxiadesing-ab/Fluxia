@@ -4,6 +4,8 @@ import { Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import MetaPixelTracker from "../components/MetaPixelTracker";
+import { OnboardingProvider } from "@/context/OnboardingContext";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -102,15 +104,12 @@ export default function RootLayout({
         </noscript>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body
-        className={`
-    ${robotoCondensed.variable}
-    antialiased
-  `}
-      >
-        <MetaPixelTracker />
-        {children}
-      </body>
+      <body className={`${robotoCondensed.variable} antialiased`}>
+  <MetaPixelTracker />
+  <OnboardingProvider>
+    {children}
+  </OnboardingProvider>
+</body>
     </html>
   );
 }
