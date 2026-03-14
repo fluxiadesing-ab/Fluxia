@@ -26,7 +26,7 @@ export const OnboardingTooltip = ({ step: targetStep, message, position = "botto
         {children}
 
         {isVisible && (
-  <div className={`absolute z-50 w-48 md:w-64 bg-white text-black rounded-xl shadow-2xl p-3 md:p-4
+  <div className={`absolute z-50 w-40 md:w-64 bg-white text-black rounded-xl shadow-2xl p-3 md:p-4
     ${position === "bottom" ? "top-full mt-3 left-1/2 -translate-x-1/2" : ""}
     ${position === "top" ? "bottom-full mb-3 left-1/2 -translate-x-1/2" : ""}
   `}>
@@ -34,8 +34,8 @@ export const OnboardingTooltip = ({ step: targetStep, message, position = "botto
       ${position === "bottom" ? "-top-1.5 left-1/2 -translate-x-1/2" : ""}
       ${position === "top" ? "-bottom-1.5 left-1/2 -translate-x-1/2" : ""}
     `} />
-    <p className="text-xs md:text-sm font-medium mb-2 md:mb-3">{message}</p>
-    <div className="flex gap-2">
+    <p className="text-xs md:text-sm font-medium mb-2 md:mb-3 text-center">{message}</p>
+    <div className="flex gap-2 justify-center">
       <button onClick={next} className="bg-black text-white px-3 md:px-4 py-1 md:py-1.5 rounded-lg text-xs md:text-sm font-medium hover:bg-gray-800">
         Got it
       </button>
