@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link"; 
+import { OnboardingTooltip } from "./OnboardingTooltip";
 
 interface Product {
   id: number;
@@ -201,11 +202,17 @@ const ProductsGrid: React.FC = () => {
     <section className="py-8 md:py-16 bg-white mt-8">
       <div className="container mx-auto px-2 sm:px-6 lg:px-8">
         {/* Products Grid */}
+        <OnboardingTooltip
+        step={1}
+        message="Browse our ready-made designs and pick the one that fits your style"
+        position="top"
+      >
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
+      </OnboardingTooltip>
       </div>
     </section>
   );
