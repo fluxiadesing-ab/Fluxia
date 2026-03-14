@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
   <h3 className="text-sm font-semibold mb-6 uppercase tracking-wider">Support</h3>
   <ul className="space-y-3">
     <li>
-      
+      <a
         href="mailto:customer@fluxiadesign.com"
         className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
       >
