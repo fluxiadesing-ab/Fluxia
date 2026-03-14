@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
       </a>
     </li>
     <li>
-      
+      <a
         href="https://wa.me/966594668096"
         target="_blank"
         rel="noopener noreferrer"
