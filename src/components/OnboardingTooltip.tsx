@@ -1,6 +1,6 @@
 "use client";
 
-import { useOnboarding } from "./OnboardingContext";
+import { useOnboarding } from "./OnboardingContext"; 
 
 type Props = {
   step: number;
