@@ -67,18 +67,18 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Section 2.5: Support */}
+         {/* Section 2.5: Support */}
 <div>
   <h3 className="text-sm font-semibold mb-6 uppercase tracking-wider">Support</h3>
   <ul className="space-y-3">
     <li>
-  
-    href="mailto:customer@fluxiadesign.com"
-    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-  >
-    <span>customer@fluxiadesign.com</span>
-  </a>
-</li>
+      
+        href="mailto:customer@fluxiadesign.com"
+        className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+      >
+        <span>customer@fluxiadesign.com</span>
+      </a>
+    </li>
     <li>
       
         href="https://wa.me/966594668096"
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
         rel="noopener noreferrer"
         className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
       >
-        WhatsApp: +1 234 567 890
+        <span>WhatsApp: +966 59 466 8096</span>
       </a>
     </li>
   </ul>
