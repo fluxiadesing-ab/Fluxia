@@ -27,8 +27,8 @@ export const OnboardingTooltip = ({ step: targetStep, message, position = "botto
 
         {isVisible && (
   <div className={`absolute z-50 w-40 md:w-64 bg-white text-black rounded-xl shadow-2xl p-3 md:p-4
-    ${position === "bottom" ? "top-full mt-3 left-1/2 -translate-x-2/3 md:-translate-x-1/2" : ""}
-    ${position === "top" ? "bottom-full mb-3 left-1/2 -translate-x-2/3 md:-translate-x-1/2" : ""}
+    ${position === "bottom" ? "top-full mt-3 left-1/2 -translate-x-1/3 md:-translate-x-1/2" : ""}
+${position === "top" ? "bottom-full mb-3 left-1/2 -translate-x-1/3 md:-translate-x-1/2" : ""}
   `}>
     <div className={`absolute w-3 h-3 bg-white rotate-45
       ${position === "bottom" ? "-top-1.5 left-1/2 -translate-x-1/2" : ""}
