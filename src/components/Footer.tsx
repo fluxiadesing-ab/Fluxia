@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
   <ul className="space-y-3">
     <li>
       
-        href="mailto:support@fluxia.com"
+        href="mailto:customer@fluxiadesign.com"
         className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
       >
         support@fluxia.com
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
     </li>
     <li>
       
-        href="https://wa.me/1234567890"
+        href="https://wa.me/966594668096"
         target="_blank"
         rel="noopener noreferrer"
         className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
