@@ -19,12 +19,19 @@ export const OnboardingProvider = ({ children }: { children: React.ReactNode }) 
   }, []);
 
   const next = () => {
-    if (step < 1) {
-      setStep(step + 1);
-    } else {
-      dismiss();
-    }
-  };
+  if (step < 1) {
+    setStep(step + 1);
+    // تمرير للمكون الثاني
+    setTimeout(() => {
+      const productsSection = document.getElementById("products-section");
+      if (productsSection) {
+        productsSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }, 100);
+  } else {
+    dismiss();
+  }
+};
 
   const dismiss = () => {
     localStorage.setItem("onboarding_done", "true");
