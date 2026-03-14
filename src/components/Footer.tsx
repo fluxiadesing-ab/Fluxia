@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white border-t border-gray-800">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 items-start">
           
           <div className="flex flex-col space-y-4">
             <div className="relative w-28 h-28">
@@ -66,6 +66,31 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+
+          {/* Section 2.5: Support */}
+<div>
+  <h3 className="text-sm font-semibold mb-6 uppercase tracking-wider">Support</h3>
+  <ul className="space-y-3">
+    <li>
+      
+        href="mailto:support@fluxia.com"
+        className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+      >
+        support@fluxia.com
+      </a>
+    </li>
+    <li>
+      
+        href="https://wa.me/1234567890"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+      >
+        WhatsApp: +1 234 567 890
+      </a>
+    </li>
+  </ul>
+</div>
 
           {/* Section 3: Payment Methods */}
           <div className="flex flex-col md:items-end">
