@@ -18,21 +18,20 @@ export const OnboardingProvider = ({ children }: { children: React.ReactNode }) 
     if (!seen) setStep(0); // ابدأ من الخطوة الأولى
   }, []);
 
-  const next = () => {
+const next = () => {
   if (step < 1) {
     setStep(step + 1);
-    // تمرير للمكون الثاني
     setTimeout(() => {
       const productsSection = document.getElementById("products-section");
       if (productsSection) {
-        productsSection.scrollIntoView({ behavior: "smooth", block: "center" });
+        const top = productsSection.getBoundingClientRect().top + window.scrollY - 120;
+        window.scrollTo({ top, behavior: "smooth" });
       }
     }, 100);
   } else {
     dismiss();
   }
 };
-
   const dismiss = () => {
     localStorage.setItem("onboarding_done", "true");
     setStep(-1);
