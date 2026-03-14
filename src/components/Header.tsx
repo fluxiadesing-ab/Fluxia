@@ -35,25 +35,25 @@ const Header: React.FC = () => {
       {/* Main Header Container */}
       <div className="container mx-auto px-6 md:py-10 py-6">
         <div className="flex items-center justify-between relative min-h-[60px]">
-          {/* Mobile Menu Button */}
-          {/* Mobile Menu Button */}
-<OnboardingTooltip
-  step={0}
-  message="You can customize any product with your own design or text"
-  position="bottom"
->
-  <button
-    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-    className="lg:hidden z-50 relative hover:text-gray-300 transition-colors"
-    aria-label="Menu"
+          <div className="lg:hidden">
+  <OnboardingTooltip
+    step={0}
+    message="You can customize any product with your own design or text"
+    position="bottom"
   >
-    {isMobileMenuOpen ? (
-      <X className="w-6 h-6" />
-    ) : (
-      <Menu className="w-6 h-6" />
-    )}
-  </button>
-</OnboardingTooltip>
+    <button
+      onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      className="z-50 relative hover:text-gray-300 transition-colors"
+      aria-label="Menu"
+    >
+      {isMobileMenuOpen ? (
+        <X className="w-6 h-6" />
+      ) : (
+        <Menu className="w-6 h-6" />
+      )}
+    </button>
+  </OnboardingTooltip>
+</div>
 
           {/* Navigation Links - Desktop */}
           {/* Navigation Links - Desktop */}
