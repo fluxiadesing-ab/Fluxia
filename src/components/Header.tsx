@@ -48,21 +48,42 @@ const Header: React.FC = () => {
           </button>
 
           {/* Navigation Links - Desktop */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`transition-colors pb-1 ${
-                  isActive(link.href)
-                    ? "text-white border-b-2 border-white font-medium"
-                    : "text-gray-300 hover:text-white"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
+          {/* Navigation Links - Desktop */}
+<nav className="hidden lg:flex items-center space-x-8">
+  {navLinks.map((link) =>
+    link.name === "Customize" ? (
+      <OnboardingTooltip
+        key={link.href}
+        step={0}
+        message="You can customize any product with your own design or text"
+        position="bottom"
+      >
+        <Link
+          href={link.href}
+          className={`transition-colors pb-1 ${
+            isActive(link.href)
+              ? "text-white border-b-2 border-white font-medium"
+              : "text-gray-300 hover:text-white"
+          }`}
+        >
+          {link.name}
+        </Link>
+      </OnboardingTooltip>
+    ) : (
+      <Link
+        key={link.href}
+        href={link.href}
+        className={`transition-colors pb-1 ${
+          isActive(link.href)
+            ? "text-white border-b-2 border-white font-medium"
+            : "text-gray-300 hover:text-white"
+        }`}
+      >
+        {link.name}
+      </Link>
+    )
+  )}
+</nav>
 
           {/* Logo */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
