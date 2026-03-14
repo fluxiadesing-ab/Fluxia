@@ -36,17 +36,24 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6 md:py-10 py-6">
         <div className="flex items-center justify-between relative min-h-[60px]">
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden z-50 relative hover:text-gray-300 transition-colors"
-            aria-label="Menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+          {/* Mobile Menu Button */}
+<OnboardingTooltip
+  step={0}
+  message="You can customize any product with your own design or text"
+  position="bottom"
+>
+  <button
+    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+    className="lg:hidden z-50 relative hover:text-gray-300 transition-colors"
+    aria-label="Menu"
+  >
+    {isMobileMenuOpen ? (
+      <X className="w-6 h-6" />
+    ) : (
+      <Menu className="w-6 h-6" />
+    )}
+  </button>
+</OnboardingTooltip>
 
           {/* Navigation Links - Desktop */}
           {/* Navigation Links - Desktop */}
@@ -138,41 +145,20 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 bg-black z-40 pt-24">
             <nav className="flex flex-col items-center space-y-6 px-6">
-      {navLinks.map((link) =>
-        link.name === "Customize" ? (
-          <OnboardingTooltip
-            key={link.href}
-            step={0}
-            message="You can customize any product with your own design or text"
-            position="bottom"
-          >
-            <Link
-              href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`text-xl transition-colors pb-2 ${
-                isActive(link.href)
-                  ? "text-white border-b-2 border-white font-medium"
-                  : "text-gray-300 hover:text-white"
-              }`}
-            >
-              {link.name}
-            </Link>
-          </OnboardingTooltip>
-        ) : (
-          <Link
-            key={link.href}
-            href={link.href}
-            onClick={() => setIsMobileMenuOpen(false)}
-            className={`text-xl transition-colors pb-2 ${
-              isActive(link.href)
-                ? "text-white border-b-2 border-white font-medium"
-                : "text-gray-300 hover:text-white"
-            }`}
-          >
-            {link.name}
-          </Link>
-        )
-      )}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-xl transition-colors pb-2 ${
+                    isActive(link.href)
+                      ? "text-white border-b-2 border-white font-medium"
+                      : "text-gray-300 hover:text-white"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
 
               {/* Mobile Currency Dropdown */}
               <div className="pt-6 border-t border-gray-800 w-full text-center">
