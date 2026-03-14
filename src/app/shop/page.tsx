@@ -374,30 +374,7 @@ function ShopContent() {
               onMouseMove={handleMouseMove}
             >
               <div className="flex gap-6 px-4 md:px-8 pb-2 min-w-max items-center">
-                {Object.values(designsData).map((design) => (
-                  <button
-                    key={design.id}
-                    onClick={() => handleDesignChange(design.id)}
-                    onDragStart={(e) => e.preventDefault()}
-                    className="flex-shrink-0 group outline-none"
-                  >
-                    <div
-                      className={`relative w-18 h-18   md:w-24 md:h-24 rounded-lg overflow-hidden bg-[#3b3b3b] border transition-all mt-2 ${
-                        selectedDesign === design.id
-                          ? "border-black scale-110 shadow-md"
-                          : "border-gray-100 opacity-80 hover:opacity-100"
-                      }`}
-                    >
-                      <Image
-                        src={design.designImage}
-                        alt={design.name}
-                        fill 
-                        className="object-contain p-2 pointer-events-none select-none"
-                        draggable={false}
-                      />
-                    </div>
-                  </button>
-                ))}
+
 
                 {/* --- زر "Customize" --- */}
                 <Link
@@ -426,6 +403,32 @@ function ShopContent() {
                     </svg>
                   </div>
                 </Link>
+                {Object.values(designsData).map((design) => (
+                  <button
+                    key={design.id}
+                    onClick={() => handleDesignChange(design.id)}
+                    onDragStart={(e) => e.preventDefault()}
+                    className="flex-shrink-0 group outline-none"
+                  >
+                    <div
+                      className={`relative w-18 h-18   md:w-24 md:h-24 rounded-lg overflow-hidden bg-[#3b3b3b] border transition-all mt-2 ${
+                        selectedDesign === design.id
+                          ? "border-black scale-110 shadow-md"
+                          : "border-gray-100 opacity-80 hover:opacity-100"
+                      }`}
+                    >
+                      <Image
+                        src={design.designImage}
+                        alt={design.name}
+                        fill 
+                        className="object-contain p-2 pointer-events-none select-none"
+                        draggable={false}
+                      />
+                    </div>
+                  </button>
+                ))}
+
+                
 
                 {/* --- زر "See All" --- */}
                 <Link
