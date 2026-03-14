@@ -72,13 +72,13 @@ const Footer: React.FC = () => {
   <h3 className="text-sm font-semibold mb-6 uppercase tracking-wider">Support</h3>
   <ul className="space-y-3">
     <li>
-      
-        href="mailto:customer@fluxiadesign.com"
-        className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-      >
-        support@fluxia.com
-      </a>
-    </li>
+  
+    href="mailto:customer@fluxiadesign.com"
+    className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+  >
+    <span>customer@fluxiadesign.com</span>
+  </a>
+</li>
     <li>
       
         href="https://wa.me/966594668096"
