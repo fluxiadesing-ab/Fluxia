@@ -27,36 +27,39 @@ export const OnboardingTooltip = ({ step: targetStep, message, position = "botto
       <div className={`relative ${isVisible ? "z-50" : ""}`}>
         {children}
 
-        {/* البالون */}
-        {isVisible && (
-          <div className={`absolute z-50 w-64 bg-white text-black rounded-xl shadow-2xl p-4
-            ${position === "bottom" ? "top-full mt-3 left-1/2 -translate-x-1/2" : ""}
-            ${position === "top" ? "bottom-full mb-3 left-1/2 -translate-x-1/2" : ""}
-          `}>
-            {/* السهم */}
-            <div className={`absolute w-3 h-3 bg-white rotate-45
-              ${position === "bottom" ? "-top-1.5 left-1/2 -translate-x-1/2" : ""}
-              ${position === "top" ? "-bottom-1.5 left-1/2 -translate-x-1/2" : ""}
-            `} />
+     {isVisible && (
+  <div className="
+    fixed z-50 
+    bottom-6 left-4 right-4
+    md:absolute md:bottom-auto md:left-1/2 md:right-auto
+    md:-translate-x-1/2
+    bg-white text-black rounded-xl shadow-2xl p-4
+    w-auto md:w-64
+    mx-auto
+  ">
+    {/* السهم — يظهر فقط على الديسكتوب */}
+    <div className={`hidden md:block absolute w-3 h-3 bg-white rotate-45
+      ${position === "bottom" ? "-top-1.5 left-1/2 -translate-x-1/2" : ""}
+      ${position === "top" ? "-bottom-1.5 left-1/2 -translate-x-1/2" : ""}
+    `} />
 
-            <p className="text-sm font-medium mb-3">{message}</p>
-            <div className="flex gap-2">
-              <button
-                onClick={next}
-                className="bg-black text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-gray-800"
-              >
-                  Got it
-
-              </button>
-              <button
-                onClick={dismiss}
-                className="text-gray-400 text-sm hover:text-gray-600"
-              >
-                Skip
-              </button>
-            </div>
-          </div>
-        )}
+    <p className="text-sm font-medium mb-3">{message}</p>
+    <div className="flex gap-2">
+      <button
+        onClick={next}
+        className="bg-black text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-gray-800"
+      >
+        Got it
+      </button>
+      <button
+        onClick={dismiss}
+        className="text-gray-400 text-sm hover:text-gray-600"
+      >
+        Skip
+      </button>
+    </div>
+  </div>
+)}
       </div>
     </div>
   );
